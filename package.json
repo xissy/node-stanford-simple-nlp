@@ -1,0 +1,33 @@
+{
+  "name": "stanford-simple-nlp",
+  "version": "0.0.1",
+  "author": {
+    "name": "Taeho Kim",
+    "email": "xissysnd@gmail.com"
+  },
+  "main": "index",
+  "dependencies": {
+    "coffee-script": "1.6.3",
+    "java": "0.2.4",
+    "xml2js": "0.2.8"
+  },
+  "readmeFilename": "README.md",
+  "description": "A simple node.js wrapper for stanford-core-nlp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xissy/node-stanford-simple-nlp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xissy/node-stanford-simple-nlp/issues"
+  },
+  "devDependencies": {
+    "should": "1.2.2",
+    "mocha": "1.12.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script --globals lw --recursive ./test -t 100000"
+  }
+}
