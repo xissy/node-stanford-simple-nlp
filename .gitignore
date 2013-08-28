@@ -20,3 +20,5 @@ sftp-config.json
 *.DS_Store
 
 config.json
+
+jar/stanford-corenlp-3.2.0-models.jar
