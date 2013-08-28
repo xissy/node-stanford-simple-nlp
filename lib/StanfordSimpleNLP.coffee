@@ -78,7 +78,7 @@ class StanfordSimpleNLP
               (err, result) =>
                 return callback err  if err?
                 
-                callback null, JSON.stringify result
+                callback null, result
 
 
 
