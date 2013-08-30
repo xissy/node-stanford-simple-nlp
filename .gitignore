@@ -21,4 +21,5 @@ sftp-config.json
 
 config.json
 
-jar/stanford-corenlp-3.2.0-models.jar
+jar
+!jar/README.md
