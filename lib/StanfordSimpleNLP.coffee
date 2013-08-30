@@ -1,4 +1,3 @@
-async = require 'async'
 java = require 'java'
 xml2js = require 'xml2js'
 
