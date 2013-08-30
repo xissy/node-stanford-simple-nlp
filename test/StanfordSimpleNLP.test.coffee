@@ -15,6 +15,10 @@ describe 'standfordSimpleNlpModule', ->
           should.not.exist err
           done()
 
+    describe '.loadPipelineSync(...)', ->
+      it 'should be done', ->
+        stanfordSimpleNLP.loadPipelineSync()
+
     describe '.process(...)', ->
       it 'should be done', (done) ->
         stanfordSimpleNLP.process 'Hello, Sydney!', (err, result) ->

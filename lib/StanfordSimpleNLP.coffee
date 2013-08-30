@@ -55,6 +55,14 @@ class StanfordSimpleNLP
           callback null
 
 
+  loadPipelineSync: (options) ->
+    options = @defaultOptions  if not options?
+
+    properties = java.newInstanceSync 'java.util.Properties'
+    properties.setPropertySync 'annotators', options.annotators.join(', ')
+    @pipeline = java.newInstanceSync 'edu.stanford.nlp.pipeline.StanfordCoreNLP', properties
+
+
   process: (text, callback) ->
     return callback new Error 'Load a pipeline first.'  if not @pipeline?
 
