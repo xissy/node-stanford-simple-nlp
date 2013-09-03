@@ -21,7 +21,7 @@ describe 'standfordSimpleNlpModule', ->
 
     describe '.process(...)', ->
       it 'should be done', (done) ->
-        stanfordSimpleNLP.process 'Hello, Sydney!', (err, result) ->
+        stanfordSimpleNLP.process 'Hello, Sydney! I am Austin.', (err, result) ->
           should.not.exist err
           should.exist result
           done()

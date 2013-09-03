@@ -11,6 +11,8 @@ java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0-models.jar"
 java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0.jar"
 
 
+getParsedTree = require './getParsedTree'
+
 
 class StanfordSimpleNLP
   defaultOptions:
@@ -84,7 +86,15 @@ class StanfordSimpleNLP
             ,
               (err, result) =>
                 return callback err  if err?
-                
+
+                # add parsedTree.
+                sentences = result?.document?.sentences?.sentence
+                if typeof sentences is 'object' and Array.isArray sentences
+                  for sentence in result?.document?.sentences?.sentence
+                    sentence.parsedTree = getParsedTree sentence?.parse
+                else
+                  sentence.parsedTree = getParsedTree sentence?.parse
+
                 callback null, result
 
 
