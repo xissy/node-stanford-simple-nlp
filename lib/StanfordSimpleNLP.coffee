@@ -93,7 +93,7 @@ class StanfordSimpleNLP
                   for sentence in result?.document?.sentences?.sentence
                     sentence.parsedTree = getParsedTree sentence?.parse
                 else
-                  sentence.parsedTree = getParsedTree sentence?.parse
+                  sentences.parsedTree = getParsedTree sentences?.parse
 
                 callback null, result
 
