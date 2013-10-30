@@ -92,12 +92,15 @@ class StanfordSimpleNLP
               return callback err  if err?
 
               # add parsedTree.
-              sentences = result?.document?.sentences?.sentence
-              if typeof sentences is 'object' and Array.isArray sentences
-                for sentence in result?.document?.sentences?.sentence
-                  sentence.parsedTree = getParsedTree sentence?.parse
-              else
-                sentences.parsedTree = getParsedTree sentences?.parse
+              try
+                sentences = result?.document?.sentences?.sentence
+                if typeof sentences is 'object' and Array.isArray sentences
+                  for sentence in result?.document?.sentences?.sentence
+                    sentence.parsedTree = getParsedTree sentence?.parse
+                else
+                  sentences.parsedTree = getParsedTree sentences?.parse
+              catch err
+                return callback err
 
               callback null, result
 
