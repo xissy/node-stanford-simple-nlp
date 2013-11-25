@@ -1,14 +1,14 @@
 java = require 'java'
 xml2js = require 'xml2js'
 
-java.options.push '-Xmx4g'
+java.options.push '-Xmx12g'
 
 java.classpath.push "#{__dirname}/../jar/ejml-0.19-nogui.jar"
 java.classpath.push "#{__dirname}/../jar/joda-time.jar"
 java.classpath.push "#{__dirname}/../jar/jollyday.jar"
 java.classpath.push "#{__dirname}/../jar/xom.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0-models.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0-models.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0.jar"
 
 
 getParsedTree = require './getParsedTree'
