@@ -1,7 +1,7 @@
 java = require 'java'
 xml2js = require 'xml2js'
 
-java.options.push '-Xmx12g'
+java.options.push '-Xmx4g'
 
 java.classpath.push "#{__dirname}/../jar/ejml-0.19-nogui.jar"
 java.classpath.push "#{__dirname}/../jar/joda-time.jar"
