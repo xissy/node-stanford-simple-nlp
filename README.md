@@ -12,7 +12,7 @@ The Stanford CoreNLP code is written in Java and licensed under the GNU General 
 
 ## Installation
 
-node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v1.3.2 or higher. Don't forget to set JAVA variable referred to [node-java](https://github.com/nearinfinity/node-java).
+node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v1.3.2 or higher. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
 
     $ npm install stanford-simple-nlp
 
