@@ -29,7 +29,7 @@ var StanfordSimpleNLP = require('stanford-simple-nlp').StanfordSimpleNLP;
 #### with options
 ```javascript
 var options = {
-  annotators: ['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse' 'dcoref']
+  annotators: ['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'dcoref']
 };
 
 var stanfordSimpleNLP = new StanfordSimpleNLP(options, function(err) {
