@@ -7,8 +7,8 @@ java.classpath.push "#{__dirname}/../jar/ejml-0.19-nogui.jar"
 java.classpath.push "#{__dirname}/../jar/joda-time.jar"
 java.classpath.push "#{__dirname}/../jar/jollyday.jar"
 java.classpath.push "#{__dirname}/../jar/xom.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0-models.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.1-models.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.1.jar"
 
 
 getParsedTree = require './getParsedTree'

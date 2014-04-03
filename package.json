@@ -1,6 +1,6 @@
 {
   "name": "stanford-simple-nlp",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "author": {
     "name": "Taeho Kim",
     "email": "xissysnd@gmail.com"
@@ -21,8 +21,8 @@
     "url": "https://github.com/xissy/node-stanford-simple-nlp/issues"
   },
   "devDependencies": {
-    "should": "1.2.2",
-    "mocha": "1.12.0"
+    "should": "~1.2.2",
+    "mocha": "~1.12.0"
   },
   "directories": {
     "test": "test"
