@@ -66,8 +66,6 @@ class StanfordSimpleNLP
 
 
   process: (text, options, callback) ->
-    return callback new Error 'Load a pipeline first.'  if not @pipeline?
-
     if typeof options is 'function'
       callback = options
       options =
@@ -75,6 +73,8 @@ class StanfordSimpleNLP
           explicitRoot: false
           explicitArray: false
           attrkey: '$'
+
+    return callback new Error 'Load a pipeline first.'  if not @pipeline?
 
     @pipeline.process text, (err, annotation) =>
       return callback err  if err?

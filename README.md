@@ -21,30 +21,25 @@ node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/s
 
 ## Usage
 
-### Initialize
+#### Async mode
 ```javascript
-var StanfordSimpleNLP = require('stanford-simple-nlp').StanfordSimpleNLP;
-```
+var StanfordSimpleNlp = require('stanford-simple-nlp');
 
-#### with options
-```javascript
-var options = {
-  annotators: ['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'dcoref']
-};
-
-var stanfordSimpleNLP = new StanfordSimpleNLP(options, function(err) {
+var stanfordSimpleNLP = new StanfordSimpleNLP( function(err) {
   stanfordSimpleNLP.process('This is so good.', function(err, result) {
     ...
   });
 });
 ```
 
-#### without options
+#### Sync mode
 ```javascript
-var stanfordSimpleNLP = new StanfordSimpleNLP( function(err) {
-  stanfordSimpleNLP.process('This is so good.', function(err, result) {
-    ...
-  });
+var StanfordSimpleNlp = require('stanford-simple-nlp');
+
+var stanfordSimpleNLP = new StanfordSimpleNLP();
+stanfordSimpleNLP.loadPipelineSync();
+stanfordSimpleNLP.process('This is so good.', function(err, result) {
+  ...
 });
 ```
 
