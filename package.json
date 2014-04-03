@@ -1,15 +1,15 @@
 {
   "name": "stanford-simple-nlp",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "author": {
     "name": "Taeho Kim",
     "email": "xissysnd@gmail.com"
   },
   "main": "index",
   "dependencies": {
-    "coffee-script": "1.6.3",
-    "java": "0.2.4",
-    "xml2js": "0.2.8"
+    "coffee-script": "~1.7.1",
+    "java": "~0.2.4",
+    "xml2js": "~0.2.8"
   },
   "readmeFilename": "README.md",
   "description": "A simple node.js wrapper for Stanford CoreNLP.",
@@ -28,6 +28,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script --globals lw --recursive ./test -t 100000"
+    "test": "mocha --compilers coffee:coffee-script --require coffee-script/register --globals lw --recursive ./test -t 100000"
   }
 }

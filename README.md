@@ -12,11 +12,11 @@ The Stanford CoreNLP code is written in Java and licensed under the GNU General 
 
 ## Installation
 
-node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v1.3.2 or higher. Don't forget to set JAVA variable referred to [node-java](https://github.com/nearinfinity/node-java).
+node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v1.3.2 or higher. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
 
     $ npm install stanford-simple-nlp
 
-**Important!** You should download `stanford-corenlp-full-2013-06-20.zip` file and unzip to `jar/` folder. You can download the file from [here](http://nlp.stanford.edu/software/stanford-corenlp-full-2013-06-20.zip). This file couldn't be pushed to github & npm because of its too big size(about 223MB).
+**Important!** You should download `stanford-corenlp-full-2013-11-12.zip` file and unzip to `jar/` folder. You can download the file from [here](http://nlp.stanford.edu/software/stanford-corenlp-full-2013-11-12.zip). This file couldn't be pushed to github & npm because of its too big size(about 211MB).
 
 
 ## Usage
@@ -29,7 +29,7 @@ var StanfordSimpleNLP = require('stanford-simple-nlp').StanfordSimpleNLP;
 #### with options
 ```javascript
 var options = {
-  annotators = ['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse' 'dcoref'];
+  annotators: ['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'dcoref']
 };
 
 var stanfordSimpleNLP = new StanfordSimpleNLP(options, function(err) {
@@ -68,3 +68,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Author: Taeho Kim (xissysnd@gmail.com). Copyright 2013.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/xissy/node-stanford-simple-nlp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

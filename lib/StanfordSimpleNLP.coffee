@@ -1,14 +1,14 @@
 java = require 'java'
 xml2js = require 'xml2js'
 
-java.options.push '-Xmx3g'
+java.options.push '-Xmx4g'
 
 java.classpath.push "#{__dirname}/../jar/ejml-0.19-nogui.jar"
 java.classpath.push "#{__dirname}/../jar/joda-time.jar"
 java.classpath.push "#{__dirname}/../jar/jollyday.jar"
 java.classpath.push "#{__dirname}/../jar/xom.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0-models.jar"
-java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.2.0.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0-models.jar"
+java.classpath.push "#{__dirname}/../jar/stanford-corenlp-3.3.0.jar"
 
 
 getParsedTree = require './getParsedTree'
@@ -65,8 +65,16 @@ class StanfordSimpleNLP
     @pipeline = java.newInstanceSync 'edu.stanford.nlp.pipeline.StanfordCoreNLP', properties
 
 
-  process: (text, callback) ->
+  process: (text, options, callback) ->
     return callback new Error 'Load a pipeline first.'  if not @pipeline?
+
+    if typeof options is 'function'
+      callback = options
+      options =
+        xml:
+          explicitRoot: false
+          explicitArray: false
+          attrkey: '$'
 
     @pipeline.process text, (err, annotation) =>
       return callback err  if err?
@@ -80,22 +88,21 @@ class StanfordSimpleNLP
           stringWriter.toString (err, xmlString) =>
             return callback err  if err?
 
-            xml2js.parseString xmlString,
-              explicitRoot: false
-              explicitArray: false
-            ,
-              (err, result) =>
-                return callback err  if err?
+            xml2js.parseString xmlString, options.xml, (err, result) =>
+              return callback err  if err?
 
-                # add parsedTree.
+              # add parsedTree.
+              try
                 sentences = result?.document?.sentences?.sentence
                 if typeof sentences is 'object' and Array.isArray sentences
                   for sentence in result?.document?.sentences?.sentence
                     sentence.parsedTree = getParsedTree sentence?.parse
                 else
                   sentences.parsedTree = getParsedTree sentences?.parse
+              catch err
+                return callback err
 
-                callback null, result
+              callback null, result
 
 
 
