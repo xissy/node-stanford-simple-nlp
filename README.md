@@ -12,11 +12,11 @@ The Stanford CoreNLP code is written in Java and licensed under the GNU General 
 
 ## Installation
 
-node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v1.3.2 or higher. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
+node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v3.3.1. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
 
     $ npm install stanford-simple-nlp
 
-**Important!** You should download `stanford-corenlp-full-2013-11-12.zip` file and unzip to `jar/` folder. You can download the file from [here](http://nlp.stanford.edu/software/stanford-corenlp-full-2013-11-12.zip). This file couldn't be pushed to github & npm because of its too big size(about 211MB).
+**Important!** You should download `stanford-corenlp-full-2014-01-04.zip` file and unzip to this folder. You can download the file from [here](http://www-nlp.stanford.edu/software/stanford-corenlp-full-2014-01-04.zip). This file couldn't be pushed to github & npm because of its too big size(about 214MB).
 
 
 ## Usage
@@ -67,7 +67,7 @@ This license also applies to the included Stanford CoreNLP files.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Author: Taeho Kim (xissysnd@gmail.com). Copyright 2013.
+Author: Taeho Kim (xissysnd@gmail.com). Copyright 2013~2014.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/xissy/node-stanford-simple-nlp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
