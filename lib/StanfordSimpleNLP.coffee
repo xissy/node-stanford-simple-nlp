@@ -3,7 +3,7 @@ xml2js = require 'xml2js'
 
 java.options.push '-Xmx4g'
 
-java.classpath.push "#{__dirname}/../jar/ejml-0.19-nogui.jar"
+java.classpath.push "#{__dirname}/../jar/ejml-0.23.jar"
 java.classpath.push "#{__dirname}/../jar/joda-time.jar"
 java.classpath.push "#{__dirname}/../jar/jollyday.jar"
 java.classpath.push "#{__dirname}/../jar/xom.jar"
