@@ -16,16 +16,16 @@ node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/s
 
     $ npm install stanford-simple-nlp
 
-**Important!** You should download `stanford-corenlp-full-2014-01-04.zip` file and unzip to this folder. You can download the file from [here](http://www-nlp.stanford.edu/software/stanford-corenlp-full-2014-01-04.zip). This file couldn't be pushed to github & npm because of its too big size(about 214MB).
+**Important!** You should download `stanford-corenlp-full-2014-01-04.zip` file and unzip to the ./jar folder. You can download the file from [here](http://www-nlp.stanford.edu/software/stanford-corenlp-full-2014-01-04.zip). This file couldn't be pushed to github & npm because of its too big size(about 214MB).
 
 
 ## Usage
 
 #### Async mode
 ```javascript
-var StanfordSimpleNlp = require('stanford-simple-nlp');
+var StanfordSimpleNLP = require('stanford-simple-nlp');
 
-var stanfordSimpleNLP = new StanfordSimpleNLP( function(err) {
+var stanfordSimpleNLP = new StanfordSimpleNLP.StanfordSimpleNLP( function(err) {
   stanfordSimpleNLP.process('This is so good.', function(err, result) {
     ...
   });
@@ -36,7 +36,7 @@ var stanfordSimpleNLP = new StanfordSimpleNLP( function(err) {
 ```javascript
 var StanfordSimpleNlp = require('stanford-simple-nlp');
 
-var stanfordSimpleNLP = new StanfordSimpleNLP();
+var stanfordSimpleNLP = new StanfordSimpleNLP.StanfordSimpleNLP();
 stanfordSimpleNLP.loadPipelineSync();
 stanfordSimpleNLP.process('This is so good.', function(err, result) {
   ...
