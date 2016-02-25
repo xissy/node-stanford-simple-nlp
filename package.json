@@ -8,7 +8,7 @@
   "main": "index",
   "dependencies": {
     "coffee-script": "~1.7.1",
-    "java": "~0.2.4",
+    "java": "~0.6.1",
     "xml2js": "~0.2.8"
   },
   "readmeFilename": "README.md",
