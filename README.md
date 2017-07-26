@@ -12,11 +12,11 @@ The Stanford CoreNLP code is written in Java and licensed under the GNU General 
 
 ## Installation
 
-node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v3.3.1. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
+node-stanford-simple-nlp depends on [Standord CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml) v3.8.0. And don't forget to [set proper environment variables](https://github.com/nearinfinity/node-java) like `JAVA_HOME` in your system.
 
     $ npm install stanford-simple-nlp
 
-**Important!** You should download `stanford-corenlp-full-2014-01-04.zip` file and unzip to the ./jar folder. You can download the file from [here](http://www-nlp.stanford.edu/software/stanford-corenlp-full-2014-01-04.zip). This file couldn't be pushed to github & npm because of its too big size(about 214MB).
+**Important!** You should download `stanford-corenlp-full-2017-06-09.zip` file and unzip to the ./jar folder. You can download the file from [here](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip). This file couldn't be pushed to github & npm because of its too big size(about 214MB).
 
 
 ## Usage
@@ -36,7 +36,7 @@ var stanfordSimpleNLP = new StanfordSimpleNLP.StanfordSimpleNLP( function(err) {
 ```javascript
 var StanfordSimpleNlp = require('stanford-simple-nlp');
 
-var stanfordSimpleNLP = new StanfordSimpleNLP.StanfordSimpleNLP();
+var stanfordSimpleNLP = new StanfordSimpleNlp.StanfordSimpleNLP();
 stanfordSimpleNLP.loadPipelineSync();
 stanfordSimpleNLP.process('This is so good.', function(err, result) {
   ...
